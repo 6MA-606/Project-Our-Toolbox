@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+:root {
+    --font: 'Concert One', cursive;
+}
+
+html {
+    font-family: var(--font);
+}
+
+body {
+    margin: 0;
+    background-color: #382c61;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > .text {
+    font-size: 4em;
+    color: aliceblue;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid:
+        "A" 10em
+        "B" auto
+        / auto
+    ;
+}

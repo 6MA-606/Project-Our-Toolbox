@@ -1,0 +1,33 @@
+.shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    transition: .25s;
+    box-shadow: #00000044 6px 6px 10px 1px;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    opacity: 0%;
+    font-size: 0.75em;
+    position: absolute;
+    color: white;
+    background-color: #0007;
+    padding: 1px 3px;
+    border-radius: 5px;
+    z-index: 3;
+}

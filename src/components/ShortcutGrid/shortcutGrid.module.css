@@ -1,0 +1,36 @@
+:root {
+    --size: 230px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.shortcutGrid {
+    height: var(--size);
+    display: grid;
+    gap: 10px;
+
+    /* background-color: red; */
+}
+
+.icon {
+    width: var(--size);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.wide {
+    width: calc(var(--size) + 70px);
+    grid-template: repeat(3, 1fr) / 1fr
+}
+
+.headLabel {
+    /* position: absolute; */
+    color: #f8f8ff;
+    margin: 1em 0;
+    /* transform: translateY(-1.75em); */
+}
