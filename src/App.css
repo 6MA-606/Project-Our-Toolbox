@@ -4,13 +4,28 @@
     --font: 'Concert One', cursive;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #fff5;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fff7;
+}
+::-webkit-scrollbar {
+    /* background-color: red; */
+    width: 10px;
+}
+
 html {
     font-family: var(--font);
 }
 
 body {
     margin: 0;
-    background-color: #382c61;
+    background-image: url(../public/img/bg/our-tool-bg1.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: overlay;
 }
 
 .header {
@@ -22,6 +37,7 @@ body {
 .header > .text {
     font-size: 4em;
     color: aliceblue;
+    text-shadow: 0 0 10px #5b4161;
 }
 
 .App {
@@ -29,7 +45,7 @@ body {
     height: 100vh;
     display: grid;
     grid:
-        "A" 10em
+        "A" 7em
         "B" auto
         / auto
     ;

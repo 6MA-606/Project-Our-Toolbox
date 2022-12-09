@@ -2,7 +2,8 @@ import styles from './ShortcutGrid.module.css';
 
 const ShortcutGrid = (props) => {
 
-    const { type, label } = props;
+    const { type, label, 
+     } = props;
 
     const isDefined = (data) => {
         if (data !== undefined && data !== "") return true;

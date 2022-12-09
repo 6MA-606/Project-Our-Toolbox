@@ -9,10 +9,6 @@ const Shortcut = (props) => {
 
     const [show, setShow] = useState(false);
 
-    const handleClick = () => {
-        window.open( href, '_blank');
-    }
-
     let invert = thumbnailInvert ? 1 : 0;
     let style_pack = {
         backgroundColor: bgcolor,
@@ -55,7 +51,7 @@ const Shortcut = (props) => {
                 height="70px"
                 weight="auto"
                 alt="thumbnail missing"
-                style={{ flex: '70px', filter: 'invert(' + invert + ')' }}
+                style={{ flex: '70px', filter: 'invert(' + invert + ')', pointerEvents: 'none' }}
             />
         );
     }
@@ -63,18 +59,21 @@ const Shortcut = (props) => {
     return (
         <div className={ styles.shortcut }>
             { tooltip_form(tooltip) }
-            <motion.div
-                className={ styles.item }
-                whileHover={{ type: "spring", bounce: 5, scale: 1.2 }}
-                whileTap={{ type: "spring", bounce: 5, scale: 0.8 }}
-                onMouseEnter={() => {setShow(true)}}
-                onMouseLeave={() => {setShow(false)}}
-            >
-                <div className={ styles.container } onClick={ handleClick } style={ style_pack }>
-                    { thumbnail_form(internalThumbnail) }
-                    { icon ? '' : content }
-                </div>
-            </motion.div>
+            <a href={ href } target="_blank">
+                <motion.div
+                    className={ styles.item }
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", bounce: 0.7 }}
+                    onMouseEnter={() => {setShow(true)}}
+                    onMouseLeave={() => {setShow(false)}}
+                >
+                    <div className={ styles.container } style={ style_pack }>
+                        { thumbnail_form(internalThumbnail) }
+                        { icon ? '' : content }
+                    </div>
+                </motion.div>
+            </a>
         </div>
     );
 }

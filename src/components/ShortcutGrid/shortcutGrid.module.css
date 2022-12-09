@@ -8,6 +8,15 @@
     align-items: center;
     -webkit-user-select: none;
     user-select: none;
+
+    padding: 1em;
+    border: 1px solid #f8f8ff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #fff5;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 10px 0px #49494950;
 }
 
 .shortcutGrid {
@@ -30,7 +39,9 @@
 
 .headLabel {
     /* position: absolute; */
+    font-size: 1.25rem;
     color: #f8f8ff;
     margin: 1em 0;
+    text-shadow: 0 0 5px #6c4c73;
     /* transform: translateY(-1.75em); */
 }
