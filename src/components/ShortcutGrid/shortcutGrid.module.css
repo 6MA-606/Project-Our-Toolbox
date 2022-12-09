@@ -15,7 +15,7 @@
     box-sizing: border-box;
     background-color: #fff5;
     /* -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px); */
+    backdrop-filter: blur(2px); */                       
     box-shadow: 0 0 10px 0px #49494950;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .wide {
-    width: calc(var(--size) + 70px);
+    /* width: calc(var(--size) + 70px); */
     grid-template: repeat(3, 1fr) / 1fr
 }
 
