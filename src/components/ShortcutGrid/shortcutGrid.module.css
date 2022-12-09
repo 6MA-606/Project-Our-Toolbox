@@ -14,8 +14,8 @@
     border-radius: 20px;
     box-sizing: border-box;
     background-color: #fff5;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    /* -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px); */
     box-shadow: 0 0 10px 0px #49494950;
 }
 
