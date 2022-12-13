@@ -36,9 +36,10 @@ const Shortcut = (props) => {
                     animate={show ? { opacity: 1, y: "-120%" } : { opacity: 0, y: "0%" }}
                 >
                     { tooltip }
-                </motion.span>);
+                </motion.span>
+            );
         }
-        return '';
+        return ('');
     }
 
     const thumbnail_form = (internalThumbnail) => {
@@ -56,24 +57,28 @@ const Shortcut = (props) => {
         );
     }
 
+    const handleClick = () => {
+        window.open(href, "_blank");
+    }
+
     return (
         <div className={ styles.shortcut }>
             { tooltip_form(tooltip) }
-            <a href={ href } target="_blank">
-                <motion.div
-                    className={ styles.item }
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", bounce: 0.7 }}
-                    onMouseEnter={() => {setShow(true)}}
-                    onMouseLeave={() => {setShow(false)}}
-                >
-                    <div className={ styles.container } style={ style_pack }>
-                        { thumbnail_form(internalThumbnail) }
-                        { icon ? '' : content }
-                    </div>
-                </motion.div>
-            </a>
+            <motion.div
+                className={ styles.item }
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", bounce: 0.7 }}
+                onMouseEnter={() => {setShow(true)}}
+                onMouseLeave={() => {setShow(false)}}
+
+                onClick={ handleClick }
+            >
+                <div className={ styles.container } style={ style_pack }>
+                    { thumbnail_form(internalThumbnail) }
+                    { icon ? '' : content }
+                </div>
+            </motion.div>
         </div>
     );
 }

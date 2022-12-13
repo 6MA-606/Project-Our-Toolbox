@@ -1,5 +1,5 @@
 .container {
-    margin: 1em 0;
+    margin: 5em 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -16,8 +16,6 @@
     align-content: center;
     flex-wrap: wrap;
     gap: 2em;
-
-    overflow: visible;
 }
 
 /* .container::-webkit-scrollbar-track {

@@ -7,8 +7,12 @@ const CornerBtn = (props) => {
 
     const { id, href, target, bg, icon, iconColor, iconSize } = props;
 
+    const handleClick = () => {
+        window.open(href, target);
+    }
+
     return (
-        <a id={ id } className={ styles.btn } href={ href } target={ target }>
+        <div id={ id } className={ styles.btn } onClick={ handleClick }>
             <div style={{ background: bg }}>
                 <Icon
                     iconName={ icon }
@@ -16,7 +20,7 @@ const CornerBtn = (props) => {
                     size={ iconSize }
                 />
             </div>
-        </a>
+        </div>
     );
 }
 
