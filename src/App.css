@@ -22,7 +22,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url(../public/img/bg/our-tool-bg1.svg);
+    background-image: url(./img/bg/our-tool-bg1.svg);
     background-size: cover;
     background-attachment: fixed;
     overflow: overlay;
