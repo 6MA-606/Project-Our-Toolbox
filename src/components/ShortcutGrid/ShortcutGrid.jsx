@@ -1,12 +1,11 @@
-import styles from './ShortcutGrid.module.css';
+import styles from './Grid.module.css';
 
 const ShortcutGrid = (props) => {
 
     const { type, label } = props;
 
     const isDefined = (data) => {
-        if (data !== undefined && data !== "") return true;
-        return false;
+        return (data !== undefined && data !== "");
     }
 
     let style = styles.icon;
